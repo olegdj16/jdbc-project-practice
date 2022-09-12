@@ -1,0 +1,24 @@
+
+1-Can you display sales person names ending with “th”?
+
+select sp_name from salesperson
+where sp_name like '%th';
+
+2-Can you display company names for company_id 21,32,412,43,25 ?
+
+select company_name from company
+where company_id in(21,32,412,43,25);
+
+3-How many Sales person we have in total ?
+select count(*) from salesperson;
+
+4-Can you display the sales person name who made a sale to company name  “Walmart”?
+
+select sp_name from salesperson sp
+join sales s on sp.sp_id = s.sp_id
+join company c on s.company_id = c.company_id
+where c.company_name = 'walmart';
+
+5-Can you display average sales amount for each sales person id?
+select sp_id , avg(amount) from sales
+group by sp_id;

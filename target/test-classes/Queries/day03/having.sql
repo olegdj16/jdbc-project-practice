@@ -1,5 +1,6 @@
 select * from employees;
 
+
 -- Display job_ids where their avg salary is more than 5K
 select * from EMPLOYEES;
 
@@ -10,7 +11,7 @@ having avg(SALARY)>5000;
 
 -- BAD PRACTICE and NOT CORRECT
 select JOB_ID,avg(SALARY),count(*) from EMPLOYEES
-                          where SALARY>5000
+where SALARY>5000
 group by JOB_ID;
 
 -- get me department_id where employees count bigger than 5
@@ -22,3 +23,12 @@ having count(*)<5;
 select FIRST_NAME,count(*) from EMPLOYEES
 group by FIRST_NAME
 having count(*)>1;
+
+
+
+
+
+
+
+
+

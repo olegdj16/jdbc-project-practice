@@ -1,0 +1,15 @@
+select * from CUSTOMER c left outer join ADDRESS a on c.ADDRESS_ID = a.ADDRESS_ID;
+
+select CUSTOMER_ID, FIRST_NAME, LAST_NAME, ADDRESS, PHONE
+from CUSTOMER left outer join ADDRESS
+on CUSTOMER.ADDRESS_ID = ADDRESS.ADDRESS_ID
+where ADDRESS.ADDRESS_ID is not null;
+
+
+
+
+
+
+
+
+
